@@ -1,0 +1,340 @@
+/*
+Theme Name: Desert
+Theme URI: https://github.com/jjlazo79/desert-theme/
+Author: Jose Lazo
+Author URI: http://joselazo.es/
+Description: Donations: https://calmestghost.com/donate. desert is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com//desert/issues. Thank you.
+Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Version: 1.0.0
+Requires at least: 5.2
+Tested up to: 6.1
+Requires PHP: 7.0
+License: GNU General Public License v3 or Later
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: desert
+
+Desert WordPress Theme Â© 2011-2022 Jose Lazo
+Desert is distributed under the terms of the GNU GPL
+*/
+
+html{scroll-behavior:smooth}body{line-height:1}a{text-decoration-skip-ink:auto}a[href^="tel"]{color:inherit;text-decoration:none}button{outline:0}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}q{display:inline;font-style:italic}q:before{content:'"';font-style:normal}q:after{content:'"';font-style:normal}textarea,input[type="text"],input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],input[type="password"]{-webkit-appearance:none;appearance:none;border-radius:0}input[type="search"]{-webkit-appearance:textfield}table{border-collapse:collapse;border-spacing:0}th,td{padding:2px}big{font-size:120%}small,sup,sub{font-size:80%}sup{vertical-align:super}sub{vertical-align:sub}dd{margin-left:20px}kbd,tt{font-family:courier;font-size:12px}ins{text-decoration:underline}del,strike,s{text-decoration:line-through}dt{font-weight:bold}address,cite,var{font-style:italic}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+/* .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{} */
+.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important;word-break:normal}
+.screen-reader-text:focus{background-color:#f7f7f7;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#007acc;display:block;font-size:.875rem;font-weight:700;height:auto;right:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+.skip-link{left:-9999rem;top:2.5rem;z-index:999999999;text-decoration:underline}
+.skip-link:focus{display:block;left:6px;top:7px;font-size:14px;font-weight:600;text-decoration:none;line-height:normal;padding:15px 23px 14px;z-index:100000;right:auto}
+.visually-hidden:not(:focus):not(:active), .form-allowed-tags:not(:focus):not(:active){position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px, 1px, 1px, 1px);white-space:nowrap}
+
+body {
+	font-family: 'Merriweather', serif;
+	line-height: 1.5;
+	background-color: #F5F5F5;
+	color: #555555;
+}
+
+body.desert {
+	background-image: url('img/background.png');
+	background-position: center top;
+}
+
+body.page {
+	margin: 30px;
+}
+
+body.page li {
+	word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 20px 0 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: 'Cookie', cursive;
+}
+
+.font-cookie {
+	font-family: 'Cookie', cursive;
+}
+
+section[class^='pagehome-'] {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+
+
+
+/* HOME */
+.pagehome-title {
+	background-image: url('img/logo-header-linea.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+}
+
+.pagehome-title .custom-title {
+	padding: 30px 0px;
+}
+
+.seer-item:before,
+.seer-item:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	left: 0;
+	background-image: url('img/bg-perfil-recorte-2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.seer-item {
+	position: relative;
+	background-color: #f8f8f8;
+	border-left: solid 1px #555555;
+	border-right: solid 1px #555555;
+	border-radius: 5px;
+}
+
+.seer-item:before {
+	top: 0;
+}
+
+.seer-item:after {
+	bottom: 0;
+	transform: rotate(180deg);
+}
+
+.seer-item--inner {
+	background-color: #fff;
+	border: solid 1px;
+	margin: 6px;
+}
+
+.pagehome-cta {
+	background-image: url('img/logo-llama.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 42%;
+}
+
+.single-seer .seer-header {
+	background-image: url('img/logo-header-linea.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+}
+
+
+
+/* SINGLE */
+.bg-card-img {
+    padding-top: 35px;
+}
+
+.single-seer .bg-card-small {
+	background-image: url('img/bg-perfil-horizontal.png');
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 30px 0px;
+}
+
+.seer-thumbnail {
+	text-align: center;
+}
+
+.seer-content--about {
+	background-color: #F8F8F8;
+	border: solid 1px #555555;
+}
+
+.big-white-oval {
+	background-color: #fff;
+	border: solid 1px #555555;
+	border-radius: 25px;
+}
+
+.seer-content--biography [class^='bg-'],
+.seer-content--biography .has-background,
+.desert footer {
+	background: none;
+}
+
+
+/* JS */
+.js-seer-status {
+	padding: 10px 30px;
+	display: inline-block;
+}
+
+.js-seer-status:before,
+.js-seer-status:after {
+	display: none;
+}
+
+.js-seer-status.not-available {
+	background-color: #F3B0B0;
+	color: #9F2727;
+}
+
+.js-seer-status.available {
+	background-color: #B0F3DF;
+	color: #279F7B;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width:400px) {
+	.seer-item {
+		padding-right: 2% !important;
+		padding-left: 2% !important;
+	}
+}
+
+@media screen and (max-width:575px) {
+	.seers-list {
+		margin: 0 auto;
+		max-width: 320px;
+	}
+}
+
+@media (min-width: 575px) {
+	.seer-item--inner {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	.big-white-oval {
+		border-radius: 150px;
+	}
+}
+
+@media (min-width: 768px) {
+	.seer-item--inner {
+		margin-left:  12px;
+		margin-right:  12px;
+	}
+}
+
+@media (min-width: 992px) {
+	.pagehome-title {
+		background-position: center center;
+	}
+	.single-seer .seer-content {
+		margin-top: -50px;
+	}
+
+	.single-seer .seer-header {
+		background-position: center center;
+	}
+
+	.single-seer .bg-card-small {
+		background: none;
+	}
+
+	.single-seer .bg-card-img {
+		background-image: url('img/bg-perfil-horizontal.png');
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding: 25px 0px;
+	}
+
+	.seer-item--inner {
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.seer-item--inner {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+}
+
+
+/* Boostrap override */
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1400px;
+	}
+	.seer-item {
+		border-left: solid 2px #a4a4a4;
+		border-right: solid 2px #a4a4a4;
+	}
+	.seer-item--inner {
+		border: solid 2px #a4a4a4;
+		margin-left: 31px;
+		margin-right: 31px;
+	}
+}
+
+/* .desert .text-primary-color {
+	color: #FFC367;
+}
+
+.desert .btn-primary {
+	text-transform: uppercase;
+	color: #0E0E0E;
+	background-color: #FFC367;
+	border-color: #FFC367
+}
+
+.desert .btn-primary:hover,
+.desert .btn-primary:not(:disabled):not(.disabled).active,
+.desert .btn-primary:not(:disabled):not(.disabled):active,
+.desert .show>.btn-primary.dropdown-toggle {
+	color: #0E0E0E;
+	background-color: #dda959;
+	border-color: #d19f52
+}
+
+.desert .btn-primary.focus,
+.desert .btn-primary:focus {
+	color: #0E0E0E;
+	background-color: #dda959;
+	border-color: #d19f52;
+	box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5)
+} */
+
+.desert .btn-light {
+	border: solid 2px #dda959;
+}
+
+.desert .btn-light:hover {
+	border: solid 2px #d19f52;
+}
+
+.desert .border-r {
+	border-radius: 5px;
+}
+
+.desert .btn-secondary {
+	color: #fff;
+	background-color: #279F7B;
+	border-color: #279F7B;
+}
+
+.desert .border-secondary {
+	border-color: #279F7B !important;
+	color: #279F7B;
+}
