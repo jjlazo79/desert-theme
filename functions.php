@@ -1,7 +1,7 @@
 <?php
 /*
 Theme Name: Desert theme
-Theme URI: https://joselazo.es
+Theme URI: https://github.com/jjlazo79/desert-theme/
 Description: desert based in Blakslate theme
 Author: Jose Lazo
 Author URI: https://joselazo.es
@@ -32,7 +32,7 @@ $user_id = get_current_user_id();
 $admin_url = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http' ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $param = ( count( $_GET ) ) ? '&' : '?';
 if ( !get_user_meta( $user_id, 'desert_notice_dismissed_7' ) && current_user_can( 'manage_options' ) )
-echo '<div class="notice notice-info"><p><a href="' . esc_url( $admin_url ), esc_html( $param ) . 'dismiss" class="alignright" style="text-decoration:none"><big>' . esc_html__( 'Ⓧ', 'desert' ) . '</big></a>' . wp_kses_post( __( '<big><strong>📝 Thank you for using Desert theme!</strong></big>', 'desert' ) ) . '<br /><br /><a href="https://github.com/jjlazo79/desert-theme/issues" class="button-primary" target="_blank">' . esc_html__( 'Feature Requests & Support', 'desert' ) . '</a> <a href="https://paypal.me/jjlazo79" class="button-primary" target="_blank">' . esc_html__( 'Donate', 'desert' ) . '</a></p></div>';
+echo '<div class="notice notice-info"><p><a href="' . esc_url( $admin_url ), esc_html( $param ) . 'dismiss" class="alignright" style="text-decoration:none"><big>' . esc_html__( 'Ⓧ', 'desert' ) . '</big></a>' . wp_kses_post( __( '<big><strong>📝 Thank you for using Desert theme!</strong></big>', 'desert' ) ) . '<br /><br /><a href="https://github.com/jjlazo79/desert-theme/issues" class="button-primary" target="_blank">' . esc_html__( 'Feature Requests & Support', 'desert' ) . '</a> <a href="https://www.paypal.com/donate/?hosted_button_id=GBU8XPGNUV5ZE" class="button-primary" target="_blank">' . esc_html__( 'Donate', 'desert' ) . '</a></p></div>';
 }
 add_action( 'admin_init', 'desert_notice_dismissed' );
 function desert_notice_dismissed() {

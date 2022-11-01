@@ -1,8 +1,8 @@
 === desert ===
 
 Contributors: tidythemes, bhadaway
-Donate link: https://calmestghost.com/donate
-Theme link: https://github.com/tidythemes/desert
+Donate link: https://www.paypal.com/donate/?hosted_button_id=GBU8XPGNUV5ZE
+Theme link: https://github.com/jjlazo79/desert-theme/
 Tags: accessibility-ready, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
 Requires at least: 5.2
 Tested up to: 5.9
@@ -18,7 +18,7 @@ IMPORTANT — PLEASE READ: tidythemes.com/concept
 
 YOU MAY DELETE THIS FILE AND ANY OTHER FILE(S) BEFORE STARTING YOUR PROJECT
 
-desert is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/tidythemes/desert/issues. Thank you.
+desert is the definitive WordPress boilerplate starter theme. We've carefully constructed the most clean and minimalist theme possible for designers and developers to use as a base to build websites for clients or to build completely custom themes from scratch. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability and no intrusive visual CSS styles have been added whatsoever. A perfect skeleton theme. For support and suggestions, go to: https://github.com/jjlazo79/desert-theme/issues. Thank you.
 
 If you're creating your own theme or client project, open up all files and do a "Find and Replace All in All Files" on the word "desert" with your own slug and prefix.
 
