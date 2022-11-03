@@ -5,12 +5,12 @@ Theme URI: https://github.com/jjlazo79/desert-theme/
 Description: desert based in Blakslate theme
 Author: Jose Lazo
 Author URI: https://joselazo.es
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: desert
 */
-define('TAROT_VERSION', '1.0.0');
+define('TAROT_VERSION', '1.0.1');
 add_action( 'after_setup_theme', 'desert_setup' );
 function desert_setup() {
 load_theme_textdomain( 'desert', get_template_directory() . '/languages' );

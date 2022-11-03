@@ -48,17 +48,15 @@ while (have_posts()) :
 							<div class="col-12">
 								<div class="pagehome-content p-5">
 
-
-
 									<div class="seer-item">
 										<div class="row align-items-center pl-5 pr-5">
-											<div class="col-12 col-sm-4">
-												<div class="seer-thumbnail">
+											<div class="col-12 col-md-4">
+												<div class="seer-thumbnail text-center">
 													<?php the_post_thumbnail('seer-thumb', array('title' => get_the_title(), 'class' => 'rounded-circle')); ?>
 												</div>
 											</div>
 
-											<div class="col-12 col-sm-8">
+											<div class="col-12 col-md-8">
 												<?php the_title('<span class="text-primary-color h2 text-capitalize word-no-break">', '</span>'); ?>
 												<p><?php echo $seer_specialist . ' - ' . $seer_specialist_2; ?></p>
 												<div class="seer-content--caltoaction">
