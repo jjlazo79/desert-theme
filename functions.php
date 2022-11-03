@@ -43,8 +43,7 @@ add_user_meta( $user_id, 'desert_notice_dismissed_7', 'true', true );
 add_action( 'wp_enqueue_scripts', 'desert_enqueue' );
 function desert_enqueue() {
 wp_enqueue_style( 'desert-style', get_stylesheet_uri(), array(), TAROT_VERSION );
-wp_enqueue_style('google-fonts-baskerville', 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap', false);
-wp_enqueue_style('google-fonts-poiret', 'https://fonts.googleapis.com/css2?family=Poiret+One&display=swap', false);
+wp_enqueue_style('google-fonts-josefine', 'https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap', false);
 wp_enqueue_script( 'jquery' );
 }
 add_action( 'wp_footer', 'desert_footer' );

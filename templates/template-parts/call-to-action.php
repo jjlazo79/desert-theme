@@ -14,9 +14,9 @@ declare(strict_types=1);
 ?>
 
 <div class="row container m-auto">
-	<div class="col-10">
-		<div class="pagehome-cta--header">
-			<p class="h1 text-primary-color">Llama AHORA<br> y sal de dudas</p>
+	<div class="col-12">
+		<div class="pagehome-cta--header text-center">
+			<p class="h1 text-primary-color">Llama AHORA y sal de dudas</p>
 		</div>
 	</div>
 </div>

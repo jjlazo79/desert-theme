@@ -31,7 +31,7 @@ if ($available) {
 $args = array(
 	'post_type'      => 'seer',
 	'post_status'    => 'published',
-	'posts_per_page' => 6,
+	'posts_per_page' => 8,
 	'orderby'        => 'rand'
 );
 
@@ -57,49 +57,42 @@ if ($seers->have_posts()) :
 		$seer_hits         = get_post_meta(get_the_ID(), 'seer_hits', true);
 		$seer_inquiries    = get_post_meta(get_the_ID(), 'seer_inquiries', true);
 		?>
-		<div class="col-12 col-sm-6 col-lg-4">
-			<div class="m-2">
-				<div class="seer-item pointer row p-3 mb-4" onclick="window.open('<?php echo get_the_permalink(); ?>');return false;">
-					<div class="seer-item--inner p-3">
-						<div class="seer-title mb-3 text-center">
-							<?php the_title('<span class="text-capitalize h1">', '</span>'); ?>
-						</div>
-
-						<div class="seer-thumbnail mb-3 text-center">
-							<div class="seer-meta mb-4">
-								<div class="row">
-									<div class="col-12 pt-3 font-macondo">
-										<p>
-											<span class="js-seer-status <?php echo $status_class; ?>"><span class="js-seer-status-text complex-profile"><?php echo $status; ?></span></span>
-										</p>
-									</div>
-								</div>
-
-								<div class="row mt-4">
-									<div class="col-12 text-center">
-										<?php the_post_thumbnail('thumbnail', array('title' => get_the_title(), 'class' => 'rounded-circle')); ?>
-									</div>
-
-									<div class="col-6 text-left">
-										<p class="h4"><?php echo $seer_hits; ?>%</p>
-										<p><small>Aciertos</small></p>
-									</div>
-
-									<div class="col-6 text-right">
-										<p class="h4"><?php echo $seer_inquiries; ?></p>
-										<p><small>Consultas</small></p>
-									</div>
-								</div>
+		<div class="col-12 col-sm-6 col-lg-3">
+			<div class="seer-item pointer mb-4" onclick="window.open('<?php echo get_the_permalink(); ?>');return false;">
+				<div class="seer-item--inner">
+					<div class="seer-title text-center">
+						<div class="row">
+							<div class="col-12">
+								<?php the_title('<span class="text-uppercase">', '</span>'); ?>
+							</div>
+							<div class="col-12">
+								<span class="js-seer-status <?php echo $status_class; ?>"><span class="js-seer-status-text complex-profile"><?php echo $status; ?></span></span>
 							</div>
 						</div>
+					</div>
 
-						<div class="seer-excerpt text-center">
-							<?php the_excerpt(); ?>
+					<div class="seer-thumbnail mb-3 text-center">
+						<div class="row mt-4">
+							<div class="col-12 text-center">
+								<?php the_post_thumbnail('thumbnail', array('title' => get_the_title(), 'class' => 'rounded-circle')); ?>
+							</div>
 						</div>
+					</div>
 
-						<div class="btn-holder text-center">
-							<div class="btn btn-secondary btn-lg rounded-pill">Ver perfil</div>
+					<div class="seer-excerpt pl-4 pr-4">
+						<?php the_excerpt(); ?>
+					</div>
+
+					<div class="seer-meta text-center mb-4">
+						<div class="col-12">
+							<p class=""><?php echo $seer_hits; ?>% <small>Aciertos</small>
+								<br><?php echo $seer_inquiries; ?> <small>Consultas</small>
+							</p>
 						</div>
+					</div>
+
+					<div class="btn-holder text-center">
+						<div class="btn btn-primary btn-lg rounded-pill">Ver perfil</div>
 					</div>
 				</div>
 			</div>

@@ -49,25 +49,29 @@ while (have_posts()) :
 ?>
 	<div class="container-fluid">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="main">
-			<section class="pagehome-title mt-5 mb-5 pt-2 pb-2 <?php echo $bg_text; ?>">
-				<div class="row container m-auto">
-					<div class="col-12 col-sm-10 offset-sm-2 col-md-8 offset-md-4 col-lg-6 offset-lg-6 font-cookie text-right font-cookie text-right">
-						<?php the_title('<h1 class="display-4 custom-title">', '</h1>'); ?>
+			<section class="pagehome-title">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-md-6 offset-md-3 text-center">
+							<?php the_title('<h1 class="custom-title">', '</h1>'); ?>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="pagehome-header mt-5 mb-5 pt-2 <?php echo $bg_text; ?>">
-				<div class="row container m-auto">
-					<div class="col-12">
-						<div class="text-right h4">
-							<?php echo $page_intro; ?>
+			<section class="pagehome-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="pagehome-content p-5">
+								<?php echo $page_intro; ?>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- .page-header -->
 
-			<section class="pagehome-seers mt-5">
+			<section class="pagehome-seers background-secondary-color pt-4 pb-4 mt-5">
 				<?php
 				if (file_exists(get_stylesheet_directory() . '/templates/template-parts/seers-list.php')) {
 					include get_stylesheet_directory() . '/templates/template-parts/seers-list.php';
@@ -78,20 +82,7 @@ while (have_posts()) :
 			</section>
 			<!-- .pagehome--seers -->
 
-			<?php if (isset($styles['ss_call_to_action'])) : ?>
-				<section class="pagehome-cta pt-5 pb-5">
-					<?php
-					if (file_exists(get_stylesheet_directory() . '/templates/template-parts/call-to-action.php')) {
-						include get_stylesheet_directory() . '/templates/template-parts/call-to-action.php';
-					} else {
-						include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/call-to-action.php';
-					}
-					?>
-				</section>
-				<!-- .pagehome-cta -->
-			<?php endif; ?>
-
-			<section class="pagehome-prefooter p-5 <?php echo $bg_text; ?>">
+			<section class="pagehome-prefooter p-5">
 				<div class="row container m-auto">
 					<div class="col-12">
 						<?php echo $page_content; ?>
@@ -100,40 +91,55 @@ while (have_posts()) :
 			</section>
 			<!-- .pagehome-prefooter -->
 
-			<section class="pagehome-serviceslist p-5">
-				<?php
-				if (file_exists(get_stylesheet_directory() . '/templates/template-parts/services-list.php')) {
-					include get_stylesheet_directory() . '/templates/template-parts/services-list.php';
-				} else {
-					include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/services-list.php';
-				}
-				?>
-			</section>
-			<!-- .pagehome-serviceslist -->
+			<div class="background-secondary-color-darken mt-5 container">
+				<?php if (isset($styles['ss_call_to_action'])) : ?>
+					<section class="pagehome-cta pt-5">
+						<?php
+						if (file_exists(get_stylesheet_directory() . '/templates/template-parts/call-to-action.php')) {
+							include get_stylesheet_directory() . '/templates/template-parts/call-to-action.php';
+						} else {
+							include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/call-to-action.php';
+						}
+						?>
+					</section>
+					<!-- .pagehome-cta -->
+				<?php endif; ?>
 
-			<?php if (!empty($video1) || !empty($video2)) : ?>
-				<section class="pagehome-videos p-5">
+				<section class="pagehome-serviceslist p-5">
 					<?php
-					if (file_exists(get_stylesheet_directory() . '/templates/template-parts/videos.php')) {
-						include get_stylesheet_directory() . '/templates/template-parts/videos.php';
+					if (file_exists(get_stylesheet_directory() . '/templates/template-parts/services-list.php')) {
+						include get_stylesheet_directory() . '/templates/template-parts/services-list.php';
 					} else {
-						include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/videos.php';
+						include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/services-list.php';
 					}
 					?>
 				</section>
-				<!-- .pagehome-videos -->
-			<?php endif; ?>
+				<!-- .pagehome-serviceslist -->
 
-			<section class="pagehome-citylist p-5">
-				<?php
-				if (file_exists(get_stylesheet_directory() . '/templates/template-parts/city-list.php')) {
-					include get_stylesheet_directory() . '/templates/template-parts/city-list.php';
-				} else {
-					include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/city-list.php';
-				}
-				?>
-			</section>
-			<!-- .pagehome-citylist -->
+				<?php if (!empty($video1) || !empty($video2)) : ?>
+					<section class="pagehome-videos p-5">
+						<?php
+						if (file_exists(get_stylesheet_directory() . '/templates/template-parts/videos.php')) {
+							include get_stylesheet_directory() . '/templates/template-parts/videos.php';
+						} else {
+							include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/videos.php';
+						}
+						?>
+					</section>
+					<!-- .pagehome-videos -->
+				<?php endif; ?>
+
+				<section class="pagehome-citylist p-5">
+					<?php
+					if (file_exists(get_stylesheet_directory() . '/templates/template-parts/city-list.php')) {
+						include get_stylesheet_directory() . '/templates/template-parts/city-list.php';
+					} else {
+						include SEERSSERVICES_PLUGIN_DIR_PATH . 'templates/template-parts/city-list.php';
+					}
+					?>
+				</section>
+				<!-- .pagehome-citylist -->
+			</div>
 
 		</article><!-- #post-<?php the_ID(); ?> -->
 	</div><!-- .container -->

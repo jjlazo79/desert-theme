@@ -66,7 +66,7 @@ if (is_page_template('ss-home-template.php')) {
 			$city        = $location_name;
 			$button      = '
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-2">
-				<a class="btn btn-light btn-block rounded-pill border border-secondary" href="/' . $service . '/">
+				<a class="btn btn-light btn-block rounded-pill" href="/' . $service . '/">
 					' . $service_name . ' ' . $city_parent->name . '
 				</a>
 			</div>';
@@ -118,7 +118,7 @@ $pre_service = (strpos($service_name, "Tarot ") === 0) ? 'videntes de ' . $servi
 				<?php foreach ($city_array as $city) : ?>
 					<?php if ($location === $city->slug) continue; ?>
 					<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-2">
-						<a class="btn btn-light btn-block rounded-pill border border-secondary" href="<?php echo get_home_url() . '/' . $service . '/' . $city->slug . '/'; ?>">
+						<a class="btn btn-light btn-block rounded-pill" href="<?php echo get_home_url() . '/' . $service . '/' . $city->slug . '/'; ?>">
 							<?php echo $service_name . ' ' . $city->name; ?>
 						</a>
 					</div>
