@@ -10,7 +10,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: desert
 */
-define('TAROT_VERSION', '1.0.1');
+define('DESERT_VERSION', '1.0.1');
 add_action( 'after_setup_theme', 'desert_setup' );
 function desert_setup() {
 load_theme_textdomain( 'desert', get_template_directory() . '/languages' );
@@ -42,7 +42,7 @@ add_user_meta( $user_id, 'desert_notice_dismissed_7', 'true', true );
 }
 add_action( 'wp_enqueue_scripts', 'desert_enqueue' );
 function desert_enqueue() {
-wp_enqueue_style( 'desert-style', get_stylesheet_uri(), array(), TAROT_VERSION );
+wp_enqueue_style( 'desert-style', get_stylesheet_uri(), array(), DESERT_VERSION );
 wp_enqueue_style('google-fonts-josefine', 'https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap', false);
 wp_enqueue_script( 'jquery' );
 }
